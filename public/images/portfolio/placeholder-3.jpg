@@ -1,0 +1,9 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#fed7aa"/>
+  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" fill="#ea580c" text-anchor="middle" dominant-baseline="middle">
+    Portfolio Image 3
+  </text>
+  <text x="50%" y="60%" font-family="Arial, sans-serif" font-size="16" fill="#fb923c" text-anchor="middle" dominant-baseline="middle">
+    Huruf Timbul Stainless
+  </text>
+</svg>

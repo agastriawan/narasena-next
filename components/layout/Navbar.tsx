@@ -38,7 +38,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       <div
         className={cn(
-          'fixed inset-0 z-[99] flex flex-col items-center justify-center bg-navy-dark transition-all duration-300 lg:hidden',
+          'fixed inset-0 z-[99] flex flex-col items-center justify-center bg-white transition-all duration-300 lg:hidden',
           isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         )}
       >
@@ -49,7 +49,7 @@ export function Navbar() {
         {/* Close Button */}
         <button
           onClick={() => setIsMobileMenuOpen(false)}
-          className='absolute right-6 top-6 z-10 flex h-10 w-10 items-center justify-center border border-white/20 bg-white/5 text-white transition-all hover:border-orange hover:bg-orange/10'
+          className='absolute right-6 top-6 z-10 flex h-10 w-10 items-center justify-center border border-navy/20 bg-[#F5F5F0]/5 text-navy transition-all hover:border-orange hover:bg-orange/10'
           aria-label='Close menu'
         >
           <X className="h-6 w-6" />
@@ -75,7 +75,7 @@ export function Navbar() {
                 'group relative w-full text-center py-4 px-6 text-xl font-bold uppercase tracking-wider transition-all',
                 pathname === link.href 
                   ? 'text-orange' 
-                  : 'text-white hover:text-orange'
+                  : 'text-navy hover:text-orange'
               )}
               style={{ animationDelay: `${index * 50}ms` }}
             >
@@ -84,7 +84,7 @@ export function Navbar() {
                 <div className="absolute inset-0 border-l-2 border-orange bg-orange/5" />
               )}
               {pathname !== link.href && (
-                <div className="absolute inset-0 border-l-2 border-transparent bg-white/0 transition-all group-hover:border-orange/50 group-hover:bg-orange/5" />
+                <div className="absolute inset-0 border-l-2 border-transparent bg-[#F5F5F0]/0 transition-all group-hover:border-orange/50 group-hover:bg-orange/5" />
               )}
             </Link>
           ))}
@@ -101,7 +101,7 @@ export function Navbar() {
 
         {/* Footer Info */}
         <div className="absolute bottom-8 left-0 right-0 z-10 text-center">
-          <p className="text-sm text-white/40">© 2024 Nara Sena Creative</p>
+          <p className="text-sm text-navy/40">© 2024 Nara Sena Creative</p>
         </div>
       </div>
 
@@ -132,7 +132,7 @@ export function Navbar() {
                   'text-[0.85rem] font-medium tracking-wider transition-colors hover:text-orange relative',
                   pathname === link.href 
                     ? 'text-orange after:absolute after:bottom-[-8px] after:left-0 after:right-0 after:h-[2px] after:bg-orange' 
-                    : 'text-white/75'
+                    : 'text-navy/75'
                 )}
               >
                 {link.label}
@@ -155,9 +155,9 @@ export function Navbar() {
           className='flex flex-col gap-[5px] p-1 lg:hidden'
           aria-label='Toggle menu'
         >
-          <span className='block h-[2px] w-6 bg-white transition-all'></span>
-          <span className='block h-[2px] w-6 bg-white transition-all'></span>
-          <span className='block h-[2px] w-6 bg-white transition-all'></span>
+          <span className='block h-[2px] w-6 bg-navy transition-all'></span>
+          <span className='block h-[2px] w-6 bg-navy transition-all'></span>
+          <span className='block h-[2px] w-6 bg-navy transition-all'></span>
         </button>
       </nav>
     </>

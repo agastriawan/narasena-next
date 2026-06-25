@@ -22,7 +22,7 @@ export function WhatsAppFloatingButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        'fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-110 hover:bg-[#20BA5A] hover:shadow-[0_6px_30px_rgba(37,211,102,0.6)] md:h-16 md:w-16',
+        'fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-navy shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-110 hover:bg-[#20BA5A] hover:shadow-[0_6px_30px_rgba(37,211,102,0.6)] md:h-16 md:w-16',
         className
       )}
       aria-label="Chat via WhatsApp"

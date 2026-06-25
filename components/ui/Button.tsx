@@ -14,9 +14,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const baseStyles = 'btn-base';
 
     const variantStyles = {
-      primary: 'bg-accent text-white hover:bg-accent-600 hover:shadow-glow hover:scale-105 focus:ring-accent',
-      secondary: 'bg-primary text-white hover:bg-primary-700 hover:scale-105 focus:ring-primary',
-      outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white hover:scale-105 focus:ring-primary',
+      primary: 'bg-accent text-navy hover:bg-accent-600 hover:shadow-glow hover:scale-105 focus:ring-accent',
+      secondary: 'bg-primary text-navy hover:bg-primary-700 hover:scale-105 focus:ring-primary',
+      outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-navy hover:scale-105 focus:ring-primary',
       ghost: 'text-primary hover:bg-primary-50 hover:scale-105 focus:ring-primary',
     };
 

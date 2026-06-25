@@ -24,14 +24,14 @@ export function PortfolioCard({ item, className }: PortfolioCardProps) {
         
         {/* Category Badge */}
         <div className="absolute right-6 top-6">
-          <span className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white shadow-lg">
+          <span className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-navy shadow-lg">
             {item.category}
           </span>
         </div>
       </div>
       
       <div className="p-8">
-        <h3 className="mb-3 text-2xl font-bold text-primary transition-colors group-hover:text-accent">
+        <h3 className="mb-3 text-2xl font-bold text-primary transition-colors group-hover:text-accent text-navy">
           {item.title}
         </h3>
         

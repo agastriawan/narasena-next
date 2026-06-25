@@ -32,11 +32,11 @@ export function ServiceCard({ service, className }: ServiceCardProps) {
 
   return (
     <div className={cn('card-minimal group', className)}>
-      <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-accent-50 text-accent transition-all duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-white group-hover:shadow-glow">
+      <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-accent-50 text-accent transition-all duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-navy group-hover:shadow-glow">
         <IconComponent className="h-10 w-10" strokeWidth={1.5} />
       </div>
       
-      <h3 className="mb-4 text-2xl font-bold text-primary">{service.title}</h3>
+      <h3 className="mb-4 text-2xl font-bold text-primary text-navy">{service.title}</h3>
       
       <p className="mb-6 leading-relaxed text-gray-600">{service.description}</p>
       

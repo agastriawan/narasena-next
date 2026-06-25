@@ -29,7 +29,7 @@ export function SectionHeader({
           {subtitle}
         </p>
       )}
-      <h2 className="heading-lg mb-6">{title}</h2>
+      <h2 className="heading-lg mb-6 text-navy">{title}</h2>
       {description && (
         <p className="text-body-lg mx-auto max-w-3xl text-gray-600">
           {description}

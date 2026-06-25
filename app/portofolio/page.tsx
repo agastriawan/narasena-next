@@ -220,7 +220,7 @@ export default function PortofolioPage() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:gap-6 lg:grid-cols-2">
+          <div className="grid gap-5 md:gap-7 lg:gap-8 lg:grid-cols-2">
             {projects.filter(p => p.featured).map((project, index) => (
               <div
                 key={project.id}

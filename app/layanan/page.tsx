@@ -87,7 +87,7 @@ export default function LayananPage() {
       {/* Services Grid Section */}
       <section className="section-padding bg-white">
         <div className="mx-auto px-[5%] max-w-[1400px]">
-          <div className="grid gap-[1px] md:gap-[1.5px] bg-orange/8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-4 md:gap-5 lg:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {/* Neon Box */}
             <div className="group relative overflow-hidden bg-[#F5F5F0] p-5 sm:p-6 md:p-8 lg:p-9 transition-all duration-300 hover:bg-white hover:shadow-lg cursor-pointer reveal">
               <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-orange transition-[width] duration-350 ease-out group-hover:w-full" />

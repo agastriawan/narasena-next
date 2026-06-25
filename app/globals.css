@@ -124,8 +124,8 @@
 
   /* Diagonal slash accent */
   .diagonal-slash {
-    @apply absolute -right-[15%] -top-[10%] h-[120%] w-[70%] skew-x-[-8deg] pointer-events-none;
-    background: linear-gradient(135deg, rgba(255,106,0,0.08) 0%, rgba(255,106,0,0.02) 100%);
+    @apply absolute -right-[10%] -top-[10%] h-[120%] w-[60%] skew-x-[-8deg] pointer-events-none;
+    background: linear-gradient(135deg, rgba(255,106,0,0.1) 0%, rgba(255,106,0,0.03) 100%);
   }
 
   @media (min-width: 768px) {

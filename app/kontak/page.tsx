@@ -92,7 +92,7 @@ export default function KontakPage() {
               Informasi <span className="text-orange">Kontak</span>
             </h2>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
               {/* Phone */}
               <div className="group flex flex-col items-center text-center border-l-2 sm:border-l-0 sm:border-t-2 border-transparent bg-navy/[0.03] p-6 transition-all hover:border-orange hover:bg-orange/5">
                 <div className="flex h-14 w-14 mb-4 items-center justify-center border border-orange/30 transition-all group-hover:border-orange group-hover:bg-orange/10">
@@ -188,36 +188,35 @@ export default function KontakPage() {
       </section>
 
       {/* Map Section */}
-      <section className="relative h-[400px] md:h-[500px] bg-white overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#F5F5F0] via-white to-[#F5F5F0]">
-          <div className="grid-texture absolute inset-0 opacity-20" />
-          <div className="relative text-center z-10">
-            <div className="inline-flex items-center justify-center h-20 w-20 md:h-24 md:w-24 border-2 border-orange/30 bg-orange/5 mb-6 transition-all hover:border-orange hover:bg-orange/10">
-              <MapPin className="h-10 w-10 md:h-12 md:w-12 stroke-orange" strokeWidth={1.5} />
-            </div>
-            <p className="text-navy/70 text-sm md:text-base font-semibold mb-2">Lokasi Workshop Kami</p>
-            <p className="text-navy/50 text-xs md:text-sm max-w-[300px]">
-              Google Maps akan ditampilkan di sini<br />untuk memudahkan Anda menemukan lokasi kami
-            </p>
-          </div>
-        </div>
+      <section className="relative h-[400px] md:h-[500px] lg:h-[600px] bg-white overflow-hidden">
+        {/* Google Maps Iframe */}
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6436038484644!2d106.88091507401023!3d-6.439794162970433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eaeb5ad2e223%3A0x202422049ad3bc3b!2sSMKN%201%20Depok!5e0!3m2!1sid!2sid!4v1782380470701!5m2!1sid!2sid"
+          width="100%" 
+          height="100%" 
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade"
+          className="absolute inset-0"
+        />
         
         {/* Overlay Info */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy via-[#F5F5F0]/95 to-transparent p-6 md:p-8">
-          <div className="mx-auto px-[5%] max-w-[1400px]">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <MapPin className="h-5 w-5 stroke-orange shrink-0" strokeWidth={2} />
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white/95 via-white/90 to-transparent p-4 md:p-6 lg:p-8 pointer-events-none">
+          <div className="mx-auto px-[5%] max-w-[1400px] pointer-events-auto">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-white/95 backdrop-blur-sm border border-navy/10 p-4 md:p-5 shadow-lg">
+              <div className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 stroke-orange shrink-0 mt-0.5" strokeWidth={2} />
                 <div className="text-left">
-                  <p className="font-bold text-sm md:text-base text-navy">Jl. Raya Industri No. 123</p>
-                  <p className="text-navy/60 text-xs md:text-sm">Bogor, Jawa Barat 16610</p>
+                  <p className="font-bold text-sm md:text-base text-navy">SMKN 1 Depok</p>
+                  <p className="text-navy/60 text-xs md:text-sm">Jl. Raya Muchtar, Depok, Jawa Barat</p>
                 </div>
               </div>
               <a 
-                href="https://maps.google.com/?q=Bogor+Jawa+Barat" 
+                href="https://www.google.com/maps/dir/?api=1&destination=-6.439794162970433,106.88091507401023&destination_place_id=ChIJI-LSWuvpay4RO7yjCQQiAiA" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary text-sm"
+                className="btn-primary text-sm whitespace-nowrap"
               >
                 Buka di Maps
                 <ArrowRight className="h-4 w-4" />

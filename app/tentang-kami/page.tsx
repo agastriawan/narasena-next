@@ -132,7 +132,7 @@ export default function TentangKamiPage() {
             </h2>
           </div>
 
-          <div className="grid gap-6 md:gap-8 md:grid-cols-2">
+          <div className="grid gap-6 md:gap-8 lg:gap-10 md:grid-cols-2">
             {/* Vision */}
             <div className="group relative overflow-hidden bg-gradient-to-br from-navy/[0.04] to-navy/[0.02] border border-navy/10 p-8 md:p-10 transition-all hover:border-orange/30 reveal">
               <div className="mb-5 flex h-14 w-14 items-center justify-center border-[1.5px] border-orange/30 transition-all group-hover:border-orange group-hover:bg-orange/10">
@@ -168,7 +168,7 @@ export default function TentangKamiPage() {
             </h2>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 md:gap-6 lg:gap-7 sm:grid-cols-2 lg:grid-cols-4">
             {/* Value 1 */}
             <div className="group relative overflow-hidden bg-white border border-navy/10 p-6 md:p-7 transition-all hover:border-orange/30 hover:bg-white hover:shadow-lg reveal">
               <div className="mb-4 flex h-12 w-12 items-center justify-center border-[1.5px] border-orange/30 transition-all group-hover:border-orange group-hover:bg-orange/10">

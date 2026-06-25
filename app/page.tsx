@@ -539,9 +539,9 @@ export default function HomePage() {
       {/* Process Section */}
       <section id="proses" className="section-padding bg-[#F5F5F0]">
         <div className="mx-auto px-[5%]">
-          <div className="mb-2 text-center">
-            <p className="eyebrow mb-3 md:mb-4 reveal mx-auto">Cara Kerja Kami</p>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black leading-[1.15] reveal reveal-delay-1 mx-auto text-navy">
+          <div className="mb-2 text-left md:text-center">
+            <p className="eyebrow mb-3 md:mb-4 reveal">Cara Kerja Kami</p>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black leading-[1.15] reveal reveal-delay-1 text-navy">
               Proses <span className="text-orange">Mudah</span> & Transparan
             </h2>
           </div>

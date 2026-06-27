@@ -58,6 +58,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: '/images/portfolio/logo_transparant.png',
+    shortcut: '/images/portfolio/logo_transparant.png',
+    apple: '/images/portfolio/logo_transparant.png',
+  },
 };
 
 export default function RootLayout({

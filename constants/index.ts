@@ -8,11 +8,11 @@ export const SITE_CONFIG = {
 
 // Contact Information
 export const CONTACT_INFO = {
-  phone: '+62 812-3456-7890',
-  whatsapp: '6281234567890',
-  email: 'info@narasena.com',
-  address: 'Jl. Raya Industri, Jakarta',
-  workingHours: 'Senin - Sabtu: 08:00 - 17:00',
+  phone: '+62 812-8600-3110',
+  whatsapp: '6281286003110',
+  email: 'narasenaadv79@gmail.com',
+  address: 'Jl. Sirojul Munir No. 215 C, Nanggewer, Cibinong, Bogor 16912',
+  workingHours: 'Senin - Sabtu: 07:00 - 21:00',
 } as const;
 
 // Navigation Links

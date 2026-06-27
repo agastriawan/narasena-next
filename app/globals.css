@@ -188,6 +188,29 @@
     33%, 97% { opacity: 0; }
     100% { opacity: 1; }
   }
+
+  /* Custom Scrollbar for Modal */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #F5F5F0;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #FF6A00;
+    border-radius: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #cc5500;
+  }
+
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #FF6A00 #F5F5F0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

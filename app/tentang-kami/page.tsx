@@ -1,4 +1,5 @@
 import { ArrowRight, Target, Eye, Award, Users, Clock, Shield } from 'lucide-react';
+import Image from 'next/image';
 
 export default function TentangKamiPage() {
   return (
@@ -88,15 +89,16 @@ export default function TentangKamiPage() {
       <section className="section-padding bg-white">
         <div className="mx-auto px-[5%] max-w-[1400px]">
           <div className="grid gap-10 md:gap-16 lg:grid-cols-2 items-center">
-            {/* Left - Image Placeholder */}
+            {/* Left - Image */}
             <div className="relative reveal">
-              <div className="relative h-[400px] md:h-[500px] overflow-hidden bg-gradient-to-br from-[#F5F5F0] to-white border border-navy/10">
-                <div className="flex h-full items-center justify-center">
-                  <svg viewBox="0 0 24 24" className="h-20 w-20 stroke-orange/20 fill-none" strokeWidth={1.5}>
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                    <circle cx="12" cy="7" r="4"/>
-                  </svg>
-                </div>
+              <div className="relative h-[400px] md:h-[500px] overflow-hidden border border-navy/10">
+                <Image
+                  src="/images/portfolio/Tempat Usaha Nara Sena.png"
+                  alt="Tempat Usaha Nara Sena"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
 
@@ -232,7 +234,7 @@ export default function TentangKamiPage() {
               Hubungi Kami
               <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="https://wa.me/6281234567890" className="btn-outline border-white text-white hover:bg-white hover:text-orange">
+            <a href="https://wa.me/6281286003110" className="btn-outline border-white text-white hover:bg-white hover:text-orange">
               WhatsApp
             </a>
           </div>

@@ -24,12 +24,9 @@ export default function KontakPage() {
                 Tim kami siap membantu mewujudkan signage impian Anda. Konsultasi gratis!
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 reveal reveal-delay-3">
-                <a href="https://wa.me/6281234567890" className="btn-primary justify-center">
+                <a href="https://wa.me/6281286003110" className="btn-primary justify-center">
                   WhatsApp Langsung
                   <ArrowRight className="h-4 w-4" />
-                </a>
-                <a href="tel:+6281234567890" className="btn-outline justify-center">
-                  Telepon Kami
                 </a>
               </div>
             </div>
@@ -40,10 +37,10 @@ export default function KontakPage() {
                 <div className="absolute right-3 top-3 h-10 w-10 rounded-full bg-orange/10 transition-all group-hover:scale-110 group-hover:bg-orange/20" />
                 <div className="relative">
                   <p className="mb-2 text-3xl font-black leading-none text-navy">
-                    24<span className="text-orange">/7</span>
+                    1<span className="text-orange"> Bln</span>
                   </p>
                   <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-navy/60">
-                    Respon Cepat
+                    Garansi Perbaikan
                   </p>
                 </div>
               </div>
@@ -61,10 +58,10 @@ export default function KontakPage() {
               <div className="group relative overflow-hidden bg-gradient-to-br from-[#F5F5F0]/[0.04] to-[#F5F5F0]/[0.02] border border-navy/[0.1] p-6 transition-all hover:border-orange/30 hover:bg-white hover:shadow-lg">
                 <div className="absolute right-3 top-3 h-10 w-10 rounded-full bg-orange/10 transition-all group-hover:scale-110 group-hover:bg-orange/20" />
                 <div className="relative">
-                  <p className="mb-2 text-3xl font-black leading-none text-navy">100<span className="text-orange">+</span>
+                  <p className="mb-2 text-3xl font-black leading-none text-navy">Jasa<span className="text-orange"></span>
                   </p>
                   <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-navy/60">
-                    Transparan
+                    Perbaikan Signage
                   </p>
                 </div>
               </div>
@@ -72,10 +69,10 @@ export default function KontakPage() {
                 <div className="absolute right-3 top-3 h-10 w-10 rounded-full bg-orange/10 transition-all group-hover:scale-110 group-hover:bg-orange/20" />
                 <div className="relative">
                   <p className="mb-2 text-3xl font-black leading-none text-navy">
-                    5<span className="text-orange">+</span>
+                    100<span className="text-orange">%</span>
                   </p>
                   <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-navy/60">
-                    Garansi
+                    Profesional
                   </p>
                 </div>
               </div>
@@ -99,8 +96,8 @@ export default function KontakPage() {
                   <Phone className="h-6 w-6 stroke-orange" strokeWidth={2} />
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-navy/60 mb-2">Telepon / WhatsApp</p>
-                <a href="tel:+6281234567890" className="text-base font-bold hover:text-orange transition-colors">
-                  +62 812-3456-7890
+                <a href="tel:+6281286003110" className="text-base font-bold hover:text-orange transition-colors">
+                  0812-8600-3110
                 </a>
               </div>
 
@@ -110,8 +107,8 @@ export default function KontakPage() {
                   <Mail className="h-6 w-6 stroke-orange" strokeWidth={2} />
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-navy/60 mb-2">Email</p>
-                <a href="mailto:info@narasena.com" className="text-base font-bold hover:text-orange transition-colors break-all">
-                  info@narasena.com
+                <a href="mailto:narasenaadv79@gmail.com" className="text-base font-bold hover:text-orange transition-colors break-all">
+                  narasenaadv79@gmail.com
                 </a>
               </div>
 
@@ -122,8 +119,8 @@ export default function KontakPage() {
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-navy/60 mb-2">Alamat Workshop</p>
                 <p className="text-base font-bold leading-snug">
-                  Jl. Raya Industri No. 123<br />
-                  Bogor, Jawa Barat 16610
+                  Jl. Sirojul Munir No. 215 C<br />
+                  Nanggewer, Cibinong, Bogor 16912
                 </p>
               </div>
 
@@ -134,7 +131,7 @@ export default function KontakPage() {
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-navy/60 mb-2">Jam Operasional</p>
                 <p className="text-base font-bold leading-snug">
-                  Senin - Sabtu: 08:00 - 18:00<br />
+                  Senin - Sabtu: 07:00 - 21:00<br />
                   Minggu: <span className="text-navy/50">Tutup</span>
                 </p>
               </div>
@@ -158,13 +155,9 @@ export default function KontakPage() {
               Hubungi kami sekarang untuk konsultasi gratis. Tim profesional kami siap membantu mewujudkan signage & reklame impian Anda dengan kualitas terbaik dan harga kompetitif.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="https://wa.me/6281234567890" className="btn-primary justify-center min-w-[200px]">
+              <a href="https://wa.me/6281286003110" className="btn-primary justify-center min-w-[200px]">
                 Chat WhatsApp
                 <ArrowRight className="h-4 w-4" />
-              </a>
-              <a href="tel:+6281234567890" className="btn-outline justify-center min-w-[200px]">
-                <Phone className="h-4 w-4" />
-                Telepon Langsung
               </a>
             </div>
 
@@ -191,13 +184,13 @@ export default function KontakPage() {
       <section className="relative h-[400px] md:h-[500px] lg:h-[600px] bg-white overflow-hidden">
         {/* Google Maps Iframe */}
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6436038484644!2d106.88091507401023!3d-6.439794162970433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eaeb5ad2e223%3A0x202422049ad3bc3b!2sSMKN%201%20Depok!5e0!3m2!1sid!2sid!4v1782380470701!5m2!1sid!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.1403292064524!2d106.82362649999999!3d-6.503914000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c181ff0a0963%3A0xa80c9a6b037ac0cb!2sJl.%20Sirojul%20Munir%20No.215C%2C%20RT.01%2FRW.07%2C%20Nanggewer%2C%20Kec.%20Cibinong%2C%20Kabupaten%20Bogor%2C%20Jawa%20Barat%2016912!5e0!3m2!1sid!2sid!4v1782525980676!5m2!1sid!2sid"
           width="100%" 
           height="100%" 
           style={{ border: 0 }}
           allowFullScreen={true}
           loading="lazy" 
-          referrerPolicy="no-referrer-when-downgrade"
+          referrerPolicy="strict-origin-when-cross-origin"
           className="absolute inset-0"
         />
         
@@ -208,12 +201,12 @@ export default function KontakPage() {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 stroke-orange shrink-0 mt-0.5" strokeWidth={2} />
                 <div className="text-left">
-                  <p className="font-bold text-sm md:text-base text-navy">SMKN 1 Depok</p>
-                  <p className="text-navy/60 text-xs md:text-sm">Jl. Raya Muchtar, Depok, Jawa Barat</p>
+                  <p className="font-bold text-sm md:text-base text-navy">Nara Sena Advertising</p>
+                  <p className="text-navy/60 text-xs md:text-sm">Jl. Sirojul Munir No. 215C, Nanggewer, Cibinong, Bogor</p>
                 </div>
               </div>
               <a 
-                href="https://www.google.com/maps/dir/?api=1&destination=-6.439794162970433,106.88091507401023&destination_place_id=ChIJI-LSWuvpay4RO7yjCQQiAiA" 
+                href="https://www.google.com/maps/dir/?api=1&destination=-6.503914,106.8236265&destination_place_id=ChIJYwkK_4HBaS4RywesB2uawKg" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-sm whitespace-nowrap"

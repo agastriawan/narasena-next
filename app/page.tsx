@@ -443,95 +443,33 @@ export default function HomePage() {
                 Portofolio <span className="text-orange">Proyek</span>
               </h2>
             </div>
-            <a href="#kontak" className="btn-outline reveal">
-              Diskusikan Proyek Anda →
+            <a href="/portofolio" className="btn-outline reveal flex items-center gap-2">
+              Selengkapnya
+              <ArrowRight className="h-4 w-4" />
             </a>
           </div>
 
           {/* Portfolio Grid */}
           <div className="grid gap-4 md:gap-5 lg:gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {/* Item 1 - Tall */}
-            <div className="group relative h-[480px] cursor-pointer overflow-hidden bg-gray md:row-span-2 reveal">
-              <div className="flex h-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-[#F5F5F0] to-white transition-all group-hover:brightness-105">
-                <svg viewBox="0 0 24 24" className="h-10 w-10 stroke-orange/40 fill-none" strokeWidth={1.5}>
-                  <rect x="2" y="6" width="20" height="12" rx="1"/>
-                  <path d="M6 10h12M6 14h8"/>
-                </svg>
-                <span className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-navy/40">
-                  Neon Box – Resto Bandung
-                </span>
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[#F5F5F0]/95 to-transparent p-6 opacity-0 transition-opacity group-hover:opacity-100 lg:opacity-100">
-                <p className="text-[0.62rem] font-semibold uppercase tracking-[0.15em] text-orange">Neon Box</p>
-                <p className="text-base font-bold text-navy">Restoran Modern Bandung</p>
-              </div>
-            </div>
-
-            {/* Item 2 */}
-            <div className="group relative h-60 cursor-pointer overflow-hidden bg-gray reveal reveal-delay-1">
-              <div className="flex h-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-[#F5F5F0] to-white transition-all group-hover:brightness-105">
-                <svg viewBox="0 0 24 24" className="h-10 w-10 stroke-orange/40 fill-none" strokeWidth={1.5}>
-                  <path d="M4 17V7l4 6 4-6v10M14 17V7l3 5 3-5"/>
-                </svg>
-                <span className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-navy/40">
-                  Huruf Timbul – Office
-                </span>
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[#F5F5F0]/95 to-transparent p-6 opacity-0 transition-opacity group-hover:opacity-100 lg:opacity-100">
-                <p className="text-[0.62rem] font-semibold uppercase tracking-[0.15em] text-orange">Huruf Timbul</p>
-                <p className="text-base font-bold text-navy">Kantor Pusat Jakarta</p>
-              </div>
-            </div>
-
-            {/* Item 3 */}
-            <div className="group relative h-60 cursor-pointer overflow-hidden bg-gray reveal reveal-delay-2">
-              <div className="flex h-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-[#F5F5F0] to-white transition-all group-hover:brightness-105">
-                <svg viewBox="0 0 24 24" className="h-10 w-10 stroke-orange/40 fill-none" strokeWidth={1.5}>
-                  <rect x="3" y="3" width="18" height="11" rx="1"/>
-                  <path d="M8 21l4-7 4 7M3 14h18"/>
-                </svg>
-                <span className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-navy/40">
-                  Billboard – Jalan Raya
-                </span>
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[#F5F5F0]/95 to-transparent p-6 opacity-0 transition-opacity group-hover:opacity-100 lg:opacity-100">
-                <p className="text-[0.62rem] font-semibold uppercase tracking-[0.15em] text-orange">Billboard</p>
-                <p className="text-base font-bold text-navy">Jalan Protokol Bogor</p>
-              </div>
-            </div>
-
-            {/* Item 4 */}
-            <div className="group relative h-60 cursor-pointer overflow-hidden bg-gray reveal reveal-delay-1">
-              <div className="flex h-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-[#F5F5F0] to-white transition-all group-hover:brightness-105">
-                <svg viewBox="0 0 24 24" className="h-10 w-10 stroke-orange/40 fill-none" strokeWidth={1.5}>
-                  <rect x="8" y="2" width="8" height="8" rx="1"/>
-                  <path d="M12 10v12M7 22h10"/>
-                </svg>
-                <span className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-navy/40">
-                  Pylon Sign – Mall
-                </span>
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[#F5F5F0]/95 to-transparent p-6 opacity-0 transition-opacity group-hover:opacity-100 lg:opacity-100">
-                <p className="text-[0.62rem] font-semibold uppercase tracking-[0.15em] text-orange">Pylon Sign</p>
-                <p className="text-base font-bold text-navy">Pusat Perbelanjaan Depok</p>
-              </div>
-            </div>
-
-            {/* Item 5 */}
-            <div className="group relative h-60 cursor-pointer overflow-hidden bg-gray reveal reveal-delay-2">
-              <div className="flex h-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-[#F5F5F0] to-white transition-all group-hover:brightness-105">
-                <svg viewBox="0 0 24 24" className="h-10 w-10 stroke-orange/40 fill-none" strokeWidth={1.5}>
-                  <path d="M3 8h18M3 16h18M6 8v8M12 8v8M18 8v8"/>
-                </svg>
-                <span className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-navy/40">
-                  Kanopi – Toko Ritel
-                </span>
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[#F5F5F0]/95 to-transparent p-6 opacity-0 transition-opacity group-hover:opacity-100 lg:opacity-100">
-                <p className="text-[0.62rem] font-semibold uppercase tracking-[0.15em] text-orange">Kanopi Besi</p>
-                <p className="text-base font-bold text-navy">Toko Ritel Bogor Selatan</p>
-              </div>
-            </div>
+            {portfolioData.slice(0, 6).map((project, index) => (
+              <a
+                key={project.id}
+                href="/portofolio"
+                className="group relative h-60 cursor-pointer overflow-hidden bg-gray reveal"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-navy/80 via-navy/40 to-transparent p-6 opacity-0 transition-opacity group-hover:opacity-100 lg:opacity-100">
+                  <p className="text-[0.62rem] font-semibold uppercase tracking-[0.15em] text-orange">{project.category}</p>
+                  <p className="text-base font-bold text-white">{project.title}</p>
+                  <p className="text-[0.7rem] text-white/80 mt-1">{project.client}</p>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -722,7 +660,7 @@ export default function HomePage() {
               </p>
             </div>
             <a 
-              href="https://wa.me/6281234567890?text=Halo%20Nara%20Sena%2C%20saya%20ingin%20konsultasi%20mengenai%20kebutuhan%20signage%20saya."
+              href="https://wa.me/6281286003110?text=Halo%20Nara%20Sena%2C%20saya%20ingin%20konsultasi%20mengenai%20kebutuhan%20signage%20saya."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-white flex items-center gap-2 whitespace-nowrap w-full sm:w-auto justify-center"

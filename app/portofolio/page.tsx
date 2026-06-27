@@ -1,113 +1,44 @@
+'use client';
+
 import { ArrowRight, ExternalLink } from 'lucide-react';
+import { portfolioData } from '@/data/portfolio';
+import { PortfolioItem } from '@/types';
+import Image from 'next/image';
+import { useState } from 'react';
+import PortfolioModal from '@/components/ui/PortfolioModal';
 
 export default function PortofolioPage() {
+  const [selectedProject, setSelectedProject] = useState<PortfolioItem | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const categories = [
     { id: 'all', label: 'Semua Proyek' },
-    { id: 'neon', label: 'Neon Box' },
-    { id: 'huruf', label: 'Huruf Timbul' },
-    { id: 'billboard', label: 'Billboard' },
-    { id: 'pylon', label: 'Pylon Sign' },
-    { id: 'other', label: 'Lainnya' }
+    { id: 'Neon Box', label: 'Neon Box' },
+    { id: 'Huruf Timbul', label: 'Huruf Timbul' },
+    { id: 'Billboard', label: 'Billboard' },
+    { id: 'Pylon Sign', label: 'Pylon Sign' },
+    { id: 'Kanopi', label: 'Kanopi' },
+    { id: 'Relling', label: 'Relling' },
+    { id: 'Pagar Besi', label: 'Pagar Besi' },
+    { id: 'Signage', label: 'Signage' }
   ];
 
-  const projects = [
-    {
-      id: 1,
-      category: 'neon',
-      title: 'Restoran Modern Bandung',
-      client: 'Warung Nusantara',
-      location: 'Bandung, Jawa Barat',
-      year: '2024',
-      type: 'Neon Box',
-      description: 'Neon box custom 4x2 meter dengan LED full color untuk tampilan eksterior restoran modern.',
-      image: '/images/portfolio/project-1.jpg',
-      featured: true
-    },
-    {
-      id: 2,
-      category: 'huruf',
-      title: 'Kantor Pusat Jakarta',
-      client: 'PT Maju Jaya',
-      location: 'Jakarta Selatan',
-      year: '2024',
-      type: 'Huruf Timbul',
-      description: 'Huruf timbul stainless steel mirror dengan backlight LED di fasad gedung 3 lantai.',
-      image: '/images/portfolio/project-2.jpg',
-      featured: true
-    },
-    {
-      id: 3,
-      category: 'billboard',
-      title: 'Billboard Jalan Protokol',
-      client: 'Brand Fashion X',
-      location: 'Bogor, Jawa Barat',
-      year: '2023',
-      type: 'Billboard',
-      description: 'Billboard ukuran 4x6 meter di lokasi strategis jalan protokol dengan pencahayaan LED.',
-      image: '/images/portfolio/project-3.jpg',
-      featured: false
-    },
-    {
-      id: 4,
-      category: 'pylon',
-      title: 'Mall Pusat Perbelanjaan',
-      client: 'Plaza Senayan',
-      location: 'Depok, Jawa Barat',
-      year: '2023',
-      type: 'Pylon Sign',
-      description: 'Pylon sign setinggi 12 meter dengan panel akrilik backlit untuk identitas mall.',
-      image: '/images/portfolio/project-4.jpg',
-      featured: true
-    },
-    {
-      id: 5,
-      category: 'other',
-      title: 'Toko Ritel Modern',
-      client: 'Store Modern',
-      location: 'Bogor Selatan',
-      year: '2023',
-      type: 'Kanopi Besi',
-      description: 'Kanopi besi hollow dengan atap polycarbonate untuk area parkir dan teras toko.',
-      image: '/images/portfolio/project-5.jpg',
-      featured: false
-    },
-    {
-      id: 6,
-      category: 'neon',
-      title: 'Cafe & Resto Minimalis',
-      client: 'Kopi Kita',
-      location: 'Tangerang',
-      year: '2024',
-      type: 'Neon Box',
-      description: 'Neon box minimalis dengan desain custom logo dan brand identity yang kuat.',
-      image: '/images/portfolio/project-6.jpg',
-      featured: false
-    },
-    {
-      id: 7,
-      category: 'huruf',
-      title: 'Showroom Otomotif',
-      client: 'Auto Premium',
-      location: 'Jakarta Utara',
-      year: '2023',
-      type: 'Huruf Timbul',
-      description: 'Huruf timbul galvanis dengan LED module untuk showroom otomotif premium.',
-      image: '/images/portfolio/project-7.jpg',
-      featured: false
-    },
-    {
-      id: 8,
-      category: 'billboard',
-      title: 'Campaign Billboard Series',
-      client: 'Brand Elektronik',
-      location: 'Jakarta - Bandung',
-      year: '2023',
-      type: 'Billboard',
-      description: 'Series billboard di 5 lokasi strategis untuk kampanye produk elektronik.',
-      image: '/images/portfolio/project-8.jpg',
-      featured: true
-    }
-  ];
+  // Tandai beberapa proyek sebagai featured
+  const featuredIds = ['portfolio-1', 'portfolio-2', 'portfolio-3', 'portfolio-8'];
+  const projects = portfolioData.map(item => ({
+    ...item,
+    featured: featuredIds.includes(item.id)
+  }));
+
+  const openModal = (project: PortfolioItem) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedProject(null), 300);
+  };
 
   return (
     <>
@@ -136,7 +67,7 @@ export default function PortofolioPage() {
                   Konsultasi Gratis
                   <ArrowRight className="h-4 w-4" />
                 </a>
-                <a href="https://wa.me/6281234567890" className="btn-outline justify-center">
+                <a href="https://wa.me/6281286003110" className="btn-outline justify-center">
                   WhatsApp
                 </a>
               </div>
@@ -224,18 +155,19 @@ export default function PortofolioPage() {
             {projects.filter(p => p.featured).map((project, index) => (
               <div
                 key={project.id}
-                className="group relative overflow-hidden bg-white border border-navy/10 transition-all hover:border-orange/30 reveal"
+                onClick={() => openModal(project)}
+                className="group relative overflow-hidden bg-white border border-navy/10 transition-all hover:border-orange/30 reveal cursor-pointer"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Image */}
                 <div className="relative h-[280px] sm:h-[320px] md:h-[380px] overflow-hidden bg-gradient-to-br from-[#F5F5F0] to-white">
-                  <div className="flex h-full items-center justify-center">
-                    <svg viewBox="0 0 24 24" className="h-16 w-16 stroke-orange/20 fill-none" strokeWidth={1.5}>
-                      <rect x="2" y="6" width="20" height="12" rx="1"/>
-                      <path d="M6 10h12M6 14h8"/>
-                    </svg>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy via-[#F5F5F0]/60 to-transparent" />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
                   
                   {/* Overlay Hover */}
                   <div className="absolute inset-0 bg-orange/0 transition-all group-hover:bg-orange/10" />
@@ -250,7 +182,7 @@ export default function PortofolioPage() {
                 <div className="p-5 md:p-7">
                   <div className="mb-3 flex items-center gap-2 flex-wrap">
                     <span className="px-2.5 py-1 text-[0.65rem] md:text-[0.7rem] font-bold uppercase tracking-wider bg-orange/10 text-orange border border-orange/20">
-                      {project.type}
+                      {project.category}
                     </span>
                     <span className="text-[0.65rem] md:text-[0.7rem] text-navy/50">•</span>
                     <span className="text-[0.65rem] md:text-[0.7rem] text-navy/60">{project.year}</span>
@@ -281,10 +213,10 @@ export default function PortofolioPage() {
                     {project.description}
                   </p>
 
-                  <button className="flex items-center gap-2 text-[0.8rem] md:text-[0.85rem] font-semibold text-orange group-hover:gap-3 transition-all">
+                  <div className="flex items-center gap-2 text-[0.8rem] md:text-[0.85rem] font-semibold text-orange group-hover:gap-3 transition-all">
                     Lihat Detail
                     <ArrowRight className="h-3.5 w-3.5" />
-                  </button>
+                  </div>
                 </div>
               </div>
             ))}
@@ -308,22 +240,24 @@ export default function PortofolioPage() {
             {projects.map((project, index) => (
               <div
                 key={project.id}
-                className="group relative overflow-hidden bg-white border border-navy/10 transition-all hover:border-orange/30 hover:-translate-y-1 reveal"
+                onClick={() => openModal(project)}
+                className="group relative overflow-hidden bg-white border border-navy/10 transition-all hover:border-orange/30 hover:-translate-y-1 reveal cursor-pointer"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {/* Image */}
                 <div className="relative h-[200px] md:h-[240px] overflow-hidden bg-gradient-to-br from-[#F5F5F0] to-white">
-                  <div className="flex h-full items-center justify-center">
-                    <svg viewBox="0 0 24 24" className="h-12 w-12 stroke-orange/20 fill-none" strokeWidth={1.5}>
-                      <rect x="2" y="6" width="20" height="12" rx="1"/>
-                    </svg>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy via-[#F5F5F0]/40 to-transparent" />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
                   
                   {/* Type Badge */}
                   <div className="absolute top-3 left-3">
                     <span className="px-2 py-1 text-[0.6rem] font-bold uppercase tracking-wider bg-[#F5F5F0]/90 backdrop-blur-sm text-orange border border-orange/30">
-                      {project.type}
+                      {project.category}
                     </span>
                   </div>
 
@@ -379,12 +313,19 @@ export default function PortofolioPage() {
               Mulai Proyek
               <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="https://wa.me/6281234567890" className="btn-outline border-white text-white hover:bg-white hover:text-orange">
+            <a href="https://wa.me/6281286003110" className="btn-outline border-white text-white hover:bg-white hover:text-orange">
               Konsultasi Gratis
             </a>
           </div>
         </div>
       </section>
+
+      {/* Portfolio Modal */}
+      <PortfolioModal 
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </>
   );
 }

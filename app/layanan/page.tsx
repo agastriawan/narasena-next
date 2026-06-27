@@ -28,7 +28,7 @@ export default function LayananPage() {
                   Konsultasi Gratis
                   <ArrowRight className="h-4 w-4" />
                 </a>
-                <a href="https://wa.me/6281234567890" className="btn-outline justify-center">
+                <a href="https://wa.me/6281286003110" className="btn-outline justify-center">
                   WhatsApp
                 </a>
               </div>
@@ -263,7 +263,7 @@ export default function LayananPage() {
               Hubungi Kami
               <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="https://wa.me/6281234567890" className="btn-outline border-white text-white hover:bg-white hover:text-orange">
+            <a href="https://wa.me/6281286003110" className="btn-outline border-white text-white hover:bg-white hover:text-orange">
               WhatsApp
             </a>
           </div>

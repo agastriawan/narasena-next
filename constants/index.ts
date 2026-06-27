@@ -1,7 +1,7 @@
 // Site Configuration
 export const SITE_CONFIG = {
   name: 'Nara Sena Advertising',
-  description: 'Solusi Advertising & Signage Profesional untuk Bisnis Anda',
+  description: 'Jasa pembuatan signage profesional di Bogor - Neon Box, Huruf Timbul, Billboard, Reklame, Pylon Sign, Kanopi & Relling. Gratis konsultasi & garansi. Hubungi 0812-8600-3110',
   url: 'https://narasena.com',
   tagline: 'Advertising Profesional, Hasil Maksimal',
 } as const;

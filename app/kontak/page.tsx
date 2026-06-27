@@ -37,7 +37,7 @@ export default function KontakPage() {
                 <div className="absolute right-3 top-3 h-10 w-10 rounded-full bg-orange/10 transition-all group-hover:scale-110 group-hover:bg-orange/20" />
                 <div className="relative">
                   <p className="mb-2 text-3xl font-black leading-none text-navy">
-                    1<span className="text-orange"> Bln</span>
+                    1<span className="text-orange"> Bulan</span>
                   </p>
                   <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-navy/60">
                     Garansi Perbaikan
@@ -164,11 +164,11 @@ export default function KontakPage() {
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4 md:gap-6 mt-12 pt-12 border-t border-navy/20">
               <div>
-                <p className="text-2xl md:text-3xl font-black text-orange mb-1">500+</p>
+                <p className="text-2xl md:text-3xl font-black text-orange mb-1">72+</p>
                 <p className="text-xs md:text-sm text-navy/60 font-semibold uppercase tracking-wider">Proyek Selesai</p>
               </div>
               <div>
-                <p className="text-2xl md:text-3xl font-black text-orange mb-1">10+</p>
+                <p className="text-2xl md:text-3xl font-black text-orange mb-1">3+</p>
                 <p className="text-xs md:text-sm text-navy/60 font-semibold uppercase tracking-wider">Tahun Pengalaman</p>
               </div>
               <div>

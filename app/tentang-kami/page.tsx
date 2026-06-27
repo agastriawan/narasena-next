@@ -22,7 +22,7 @@ export default function TentangKamiPage() {
                 Partner <span className="text-orange">Terpercaya</span> Anda
               </h1>
               <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-[540px] text-navy/70 mb-6 md:mb-8 reveal reveal-delay-2">
-                5+ tahun pengalaman membantu ratusan bisnis tampil profesional.
+                3+ tahun pengalaman membantu ratusan bisnis tampil profesional.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 reveal reveal-delay-3">
                 <a href="#kontak" className="btn-primary justify-center">
@@ -40,7 +40,7 @@ export default function TentangKamiPage() {
               <div className="group relative overflow-hidden bg-gradient-to-br from-[#F5F5F0]/[0.04] to-[#F5F5F0]/[0.02] border border-navy/[0.1] p-6 transition-all hover:border-orange/30 hover:bg-white hover:shadow-lg">
                 <div className="absolute right-3 top-3 h-10 w-10 rounded-full bg-orange/10 transition-all group-hover:scale-110 group-hover:bg-orange/20" />
                 <div className="relative">
-                  <p className="mb-2 text-3xl font-black leading-none text-navy">100<span className="text-orange">+</span>
+                  <p className="mb-2 text-3xl font-black leading-none text-navy">72<span className="text-orange">+</span>
                   </p>
                   <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-navy/60">
                     Proyek Selesai
@@ -51,7 +51,7 @@ export default function TentangKamiPage() {
                 <div className="absolute right-3 top-3 h-10 w-10 rounded-full bg-orange/10 transition-all group-hover:scale-110 group-hover:bg-orange/20" />
                 <div className="relative">
                   <p className="mb-2 text-3xl font-black leading-none text-navy">
-                    5<span className="text-orange">+</span>
+                    3<span className="text-orange">+</span>
                   </p>
                   <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-navy/60">
                     Tahun Pengalaman
@@ -113,7 +113,7 @@ export default function TentangKamiPage() {
                   Nara Sena dimulai dari workshop kecil dengan satu visi: membantu bisnis lokal tampil lebih profesional melalui signage berkualitas tinggi. Kami percaya bahwa visual yang kuat adalah investasi terbaik untuk brand awareness.
                 </p>
                 <p>
-                  Selama lebih dari 5 tahun, kami telah berkembang menjadi partner terpercaya bagi ratusan klien — dari UMKM hingga perusahaan besar. Setiap proyek kami tangani dengan standar kualitas yang sama: presisi, ketepatan waktu, dan kepuasan pelanggan.
+                  Selama lebih dari 3 tahun, kami telah berkembang menjadi partner terpercaya bagi ratusan klien — dari UMKM hingga perusahaan besar. Setiap proyek kami tangani dengan standar kualitas yang sama: presisi, ketepatan waktu, dan kepuasan pelanggan.
                 </p>
                 <p>
                   Tim kami terdiri dari desainer, teknisi, dan installer berpengalaman yang siap mewujudkan visi visual Anda dari konsep hingga pemasangan.

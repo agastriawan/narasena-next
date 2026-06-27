@@ -39,7 +39,7 @@ export default function LayananPage() {
               <div className="group relative overflow-hidden bg-gradient-to-br from-navy/[0.04] to-navy/[0.02] border border-navy/10 p-6 transition-all hover:border-orange/30 hover:bg-white">
                 <div className="absolute right-3 top-3 h-10 w-10 rounded-full bg-orange/10 transition-all group-hover:scale-110 group-hover:bg-orange/20" />
                 <div className="relative">
-                  <p className="mb-2 text-3xl font-black leading-none text-navy">100<span className="text-orange">+</span>
+                  <p className="mb-2 text-3xl font-black leading-none text-navy">72<span className="text-orange">+</span>
                   </p>
                   <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-navy/60">
                     Proyek Selesai
@@ -50,7 +50,7 @@ export default function LayananPage() {
                 <div className="absolute right-3 top-3 h-10 w-10 rounded-full bg-orange/10 transition-all group-hover:scale-110 group-hover:bg-orange/20" />
                 <div className="relative">
                   <p className="mb-2 text-3xl font-black leading-none text-navy">
-                    5<span className="text-orange">+</span>
+                    3<span className="text-orange">+</span>
                   </p>
                   <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-navy/60">
                     Tahun Pengalaman

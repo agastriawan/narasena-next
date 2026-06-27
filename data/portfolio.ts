@@ -93,12 +93,12 @@ export const portfolioData: PortfolioItem[] = [
   },
   {
     id: 'portfolio-10',
-    title: 'Tempat Usaha Nara Sena',
+    title: 'Signage Eksterior Premium',
     category: 'Signage',
     client: 'Nara Sena',
     location: 'Bogor',
-    description: 'Signage eksterior untuk tempat usaha Nara Sena dengan desain profesional dan menarik.',
-    image: '/images/portfolio/Tempat Usaha Nara Sena.png',
+    description: 'Signage eksterior dengan kombinasi huruf timbul dan neon box untuk identitas usaha yang menonjol dan profesional.',
+    image: '/images/portfolio/signage.png',
     year: 2026,
   },
   {

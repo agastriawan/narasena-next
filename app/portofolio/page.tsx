@@ -10,6 +10,7 @@ import PortfolioModal from '@/components/ui/PortfolioModal';
 export default function PortofolioPage() {
   const [selectedProject, setSelectedProject] = useState<PortfolioItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeFilter, setActiveFilter] = useState('all');
 
   const categories = [
     { id: 'all', label: 'Semua Proyek' },
@@ -25,10 +26,15 @@ export default function PortofolioPage() {
 
   // Tandai beberapa proyek sebagai featured
   const featuredIds = ['portfolio-1', 'portfolio-2', 'portfolio-3', 'portfolio-8'];
-  const projects = portfolioData.map(item => ({
+  const allProjects = portfolioData.map(item => ({
     ...item,
     featured: featuredIds.includes(item.id)
   }));
+
+  // Filter projects based on active filter
+  const projects = activeFilter === 'all' 
+    ? allProjects 
+    : allProjects.filter(project => project.category === activeFilter);
 
   const openModal = (project: PortfolioItem) => {
     setSelectedProject(project);
@@ -60,7 +66,7 @@ export default function PortofolioPage() {
                 Portofolio <span className="text-orange">Proyek</span> Kami
               </h1>
               <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-[540px] text-navy/70 mb-6 md:mb-8 reveal reveal-delay-2">
-                100+ proyek signage & reklame dengan standar kualitas tinggi.
+                72+ proyek signage & reklame dengan standar kualitas tinggi.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 reveal reveal-delay-3">
                 <a href="#kontak" className="btn-primary justify-center">
@@ -78,7 +84,7 @@ export default function PortofolioPage() {
               <div className="group relative overflow-hidden bg-gradient-to-br from-navy/[0.04] to-navy/[0.02] border border-navy/10 p-6 transition-all hover:border-orange/30 hover:bg-white">
                 <div className="absolute right-3 top-3 h-10 w-10 rounded-full bg-orange/10 transition-all group-hover:scale-110 group-hover:bg-orange/20" />
                 <div className="relative">
-                  <p className="mb-2 text-3xl font-black leading-none text-navy">100<span className="text-orange">+</span>
+                  <p className="mb-2 text-3xl font-black leading-none text-navy">72<span className="text-orange">+</span>
                   </p>
                   <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-navy/60">
                     Proyek Selesai
@@ -89,7 +95,7 @@ export default function PortofolioPage() {
                 <div className="absolute right-3 top-3 h-10 w-10 rounded-full bg-orange/10 transition-all group-hover:scale-110 group-hover:bg-orange/20" />
                 <div className="relative">
                   <p className="mb-2 text-3xl font-black leading-none text-navy">
-                    5<span className="text-orange">+</span>
+                    3<span className="text-orange">+</span>
                   </p>
                   <p className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-navy/60">
                     Tahun Pengalaman
@@ -130,7 +136,12 @@ export default function PortofolioPage() {
             {categories.map((cat) => (
               <button
                 key={cat.id}
-                className="whitespace-nowrap px-4 py-2 md:px-6 md:py-2.5 text-xs md:text-sm font-semibold rounded-full border border-navy/20 transition-all hover:border-orange hover:bg-orange/10 hover:text-orange"
+                onClick={() => setActiveFilter(cat.id)}
+                className={`whitespace-nowrap px-4 py-2 md:px-6 md:py-2.5 text-xs md:text-sm font-semibold rounded-full border transition-all ${
+                  activeFilter === cat.id
+                    ? 'border-orange bg-orange text-white'
+                    : 'border-navy/20 hover:border-orange hover:bg-orange/10 hover:text-orange'
+                }`}
               >
                 {cat.label}
               </button>
@@ -140,19 +151,20 @@ export default function PortofolioPage() {
       </section>
 
       {/* Featured Projects */}
-      <section className="section-padding bg-white">
-        <div className="mx-auto px-[5%] max-w-[1400px]">
-          <div className="mb-8 md:mb-12">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-black mb-2 reveal text-navy">
-              Proyek <span className="text-orange">Unggulan</span>
-            </h2>
-            <p className="text-xs md:text-sm text-navy/60 reveal reveal-delay-1">
-              Showcase proyek terpilih dengan hasil terbaik
-            </p>
-          </div>
+      {activeFilter === 'all' && (
+        <section className="section-padding bg-white">
+          <div className="mx-auto px-[5%] max-w-[1400px]">
+            <div className="mb-8 md:mb-12">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-black mb-2 reveal text-navy">
+                Proyek <span className="text-orange">Unggulan</span>
+              </h2>
+              <p className="text-xs md:text-sm text-navy/60 reveal reveal-delay-1">
+                Showcase proyek terpilih dengan hasil terbaik
+              </p>
+            </div>
 
-          <div className="grid gap-5 md:gap-7 lg:gap-8 lg:grid-cols-2">
-            {projects.filter(p => p.featured).map((project, index) => (
+            <div className="grid gap-5 md:gap-7 lg:gap-8 lg:grid-cols-2">
+              {projects.filter(p => p.featured).map((project, index) => (
               <div
                 key={project.id}
                 onClick={() => openModal(project)}
@@ -223,16 +235,20 @@ export default function PortofolioPage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* All Projects Grid */}
       <section className="section-padding bg-[#F5F5F0]">
         <div className="mx-auto px-[5%] max-w-[1400px]">
           <div className="mb-8 md:mb-12">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-black mb-2 reveal text-navy">
-              Semua <span className="text-orange">Proyek</span>
+              {activeFilter === 'all' ? 'Semua' : categories.find(c => c.id === activeFilter)?.label} <span className="text-orange">Proyek</span>
             </h2>
             <p className="text-xs md:text-sm text-navy/60 reveal reveal-delay-1">
-              Eksplorasi lebih banyak proyek yang telah kami kerjakan
+              {activeFilter === 'all' 
+                ? 'Eksplorasi lebih banyak proyek yang telah kami kerjakan'
+                : `Menampilkan ${projects.length} proyek ${categories.find(c => c.id === activeFilter)?.label}`
+              }
             </p>
           </div>
 
@@ -241,8 +257,7 @@ export default function PortofolioPage() {
               <div
                 key={project.id}
                 onClick={() => openModal(project)}
-                className="group relative overflow-hidden bg-white border border-navy/10 transition-all hover:border-orange/30 hover:-translate-y-1 reveal cursor-pointer"
-                style={{ animationDelay: `${index * 50}ms` }}
+                className="group relative overflow-hidden bg-white border border-navy/10 transition-all hover:border-orange/30 hover:-translate-y-1 cursor-pointer"
               >
                 {/* Image */}
                 <div className="relative h-[200px] md:h-[240px] overflow-hidden bg-gradient-to-br from-[#F5F5F0] to-white">

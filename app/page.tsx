@@ -80,7 +80,7 @@ export default function HomePage() {
             </span>
           </div>
           <div className="text-right">
-            <span className="block text-4xl font-black leading-none text-navy">100<span className="text-orange">+</span>
+            <span className="block text-4xl font-black leading-none text-navy">72<span className="text-orange">+</span>
             </span>
             <span className="mt-1 block text-[0.65rem] font-medium uppercase tracking-[0.12em] text-navy/60">
               Proyek Selesai
@@ -88,7 +88,7 @@ export default function HomePage() {
           </div>
           <div className="text-right">
             <span className="block text-4xl font-black leading-none text-navy">
-              5<span className="text-orange">+</span>
+              3<span className="text-orange">+</span>
             </span>
             <span className="mt-1 block text-[0.65rem] font-medium uppercase tracking-[0.12em] text-navy/60">
               Tahun Pengalaman
@@ -107,7 +107,7 @@ export default function HomePage() {
             </span>
           </div>
           <div className="text-center">
-            <span className="block text-xl font-black leading-none text-navy">100<span className="text-orange">+</span>
+            <span className="block text-xl font-black leading-none text-navy">72<span className="text-orange">+</span>
             </span>
             <span className="mt-1 block text-[0.55rem] font-medium uppercase tracking-[0.12em] text-navy/60">
               Proyek Selesai
@@ -115,7 +115,7 @@ export default function HomePage() {
           </div>
           <div className="text-center">
             <span className="block text-xl font-black leading-none text-navy">
-              5<span className="text-orange">+</span>
+              3<span className="text-orange">+</span>
             </span>
             <span className="mt-1 block text-[0.55rem] font-medium uppercase tracking-[0.12em] text-navy/60">
               Tahun Pengalaman
@@ -377,7 +377,7 @@ export default function HomePage() {
                 <div className="group relative overflow-hidden bg-gradient-to-br from-[#F5F5F0]/[0.04] to-[#F5F5F0]/[0.02] border border-navy/[0.1] p-5 md:p-7 transition-all hover:border-orange/30 hover:bg-white hover:shadow-lg">
                   <div className="absolute right-2 top-2 md:right-3 md:top-3 h-8 w-8 md:h-10 md:w-10 rounded-full bg-orange/10 transition-all group-hover:scale-110 group-hover:bg-orange/20" />
                   <div className="relative">
-                    <p className="mb-1 md:mb-2 text-3xl md:text-4xl font-black leading-none text-navy">100<span className="text-orange">+</span>
+                    <p className="mb-1 md:mb-2 text-3xl md:text-4xl font-black leading-none text-navy">72<span className="text-orange">+</span>
                     </p>
                     <p className="text-[0.62rem] md:text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-navy/60">
                       Proyek Selesai
@@ -390,7 +390,7 @@ export default function HomePage() {
                   <div className="absolute right-3 top-3 h-10 w-10 rounded-full bg-orange/10 transition-all group-hover:scale-110 group-hover:bg-orange/20" />
                   <div className="relative">
                     <p className="mb-2 text-4xl font-black leading-none text-navy">
-                      5<span className="text-orange">+</span>
+                      3<span className="text-orange">+</span>
                     </p>
                     <p className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-navy/60">
                       Tahun Pengalaman

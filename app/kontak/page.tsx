@@ -1,4 +1,20 @@
 import { ArrowRight, Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Metadata } from 'next';
+import { SEO_CONFIG } from '@/lib/seo';
+
+export const metadata: Metadata = {
+  title: 'Kontak Kami - Nara Sena Advertising Bogor | Konsultasi Gratis',
+  description: 'Hubungi Nara Sena Advertising untuk konsultasi jasa advertising & promosi di Bogor. ☎️ 0812-8600-3110 | 📍 Jl. Sirojul Munir No. 215 C, Cibinong, Bogor. Gratis konsultasi!',
+  alternates: {
+    canonical: `${SEO_CONFIG.siteUrl}/kontak`,
+  },
+  openGraph: {
+    title: 'Kontak Kami - Nara Sena Advertising Bogor',
+    description: 'Hubungi Nara Sena Advertising untuk konsultasi jasa advertising & promosi di Bogor. Gratis konsultasi!',
+    url: `${SEO_CONFIG.siteUrl}/kontak`,
+    type: 'website',
+  },
+};
 
 export default function KontakPage() {
   return (
@@ -18,10 +34,10 @@ export default function KontakPage() {
             <div className="max-w-[700px]">
               <p className="eyebrow mb-3 md:mb-4 reveal">Hubungi Kami</p>
               <h1 className="text-[2rem] sm:text-[2.5rem] md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.1] mb-4 md:mb-6 reveal reveal-delay-1 text-navy">
-                Mari <span className="text-orange">Diskusikan</span> Proyek Anda
+                Hubungi <span className="text-orange">Nara Sena</span> Advertising
               </h1>
               <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-[540px] text-navy/70 mb-6 md:mb-8 reveal reveal-delay-2">
-                Tim kami siap membantu mewujudkan signage impian Anda. Konsultasi gratis!
+                Hubungi kami untuk konsultasi gratis seputar kebutuhan advertising & promosi bisnis Anda di Bogor dan Jabodetabek. Tim kami siap membantu!
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 reveal reveal-delay-3">
                 <a href="https://wa.me/6281286003110" className="btn-primary justify-center">

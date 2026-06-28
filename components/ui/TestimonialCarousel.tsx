@@ -4,19 +4,19 @@ import { useState, useEffect, useRef } from 'react';
 
 const testimonials = [
   {
-    quote: "Hasil kerjanya rapi dan presisi. Neon box kami jadi stand out banget di jalan raya. Pelayanan fast response, harga oke!",
-    name: "Budi Santoso",
-    title: "Owner, Warung Kopi Nusantara"
+    quote: "Hasil kerjanya rapi dan presisi. Neon box kami jadi stand out banget. Huruf timbul nyala belakangnya juga keren, pelayanan fast response!",
+    name: "Bapak Suhardi Setiawan & Ibu Utin",
+    title: "Graha ASP"
   },
   {
-    quote: "Huruf timbul stainless-nya awet dan berkelas. Investasi terbaik untuk branding kantor kami. Highly recommended!",
-    name: "Siti Nurhaliza",
-    title: "Marketing Manager, PT Maju Jaya"
+    quote: "Huruf timbulnya berkualitas tinggi dan pemasangannya profesional. Hasil memuaskan untuk sekolah kami. Highly recommended!",
+    name: "Bapak Amir",
+    title: "SMA Negeri 3 Cibinong"
   },
   {
-    quote: "Pylon sign kami jadi landmark di kawasan ini. Tim profesional, hasil memuaskan. Terima kasih Nara Sena!",
-    name: "Ahmad Ridwan",
-    title: "Developer, Plaza Senayan"
+    quote: "Tim yang sangat profesional dalam branding produk kami. Hasil memuaskan dan sesuai standar perusahaan. Terima kasih Nara Sena!",
+    name: "Bapak Helmi & Ibu Atin",
+    title: "Branding Air Minum Cleo"
   }
 ];
 

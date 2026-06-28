@@ -1,4 +1,20 @@
 import { ArrowRight } from 'lucide-react';
+import { Metadata } from 'next';
+import { SEO_CONFIG } from '@/lib/seo';
+
+export const metadata: Metadata = {
+  title: 'Layanan Advertising Bogor | Signage, Neon Box, Huruf Timbul & Promosi',
+  description: 'Layanan advertising lengkap di Bogor: Signage, Neon Box, Huruf Timbul, Billboard, Reklame, Pylon Sign, Backdrop, LED Display & solusi promosi lainnya. Konsultasi gratis ☎️ 0812-8600-3110',
+  alternates: {
+    canonical: `${SEO_CONFIG.siteUrl}/layanan`,
+  },
+  openGraph: {
+    title: 'Layanan Advertising Bogor | Nara Sena Advertising',
+    description: 'Layanan advertising lengkap di Bogor: Signage, Neon Box, Huruf Timbul, Billboard & solusi promosi lainnya',
+    url: `${SEO_CONFIG.siteUrl}/layanan`,
+    type: 'website',
+  },
+};
 
 export default function LayananPage() {
   return (
@@ -18,10 +34,10 @@ export default function LayananPage() {
             <div className="max-w-[700px]">
               <p className="eyebrow mb-3 md:mb-4 reveal">Layanan Lengkap</p>
               <h1 className="text-[2rem] sm:text-[2.5rem] md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.1] mb-4 md:mb-6 reveal reveal-delay-1 text-navy">
-                Solusi <span className="text-orange">Signage</span> Profesional
+                Layanan <span className="text-orange">Advertising</span> Profesional
               </h1>
               <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-[540px] text-navy/70 mb-6 md:mb-8 reveal reveal-delay-2">
-                Dari konsep hingga pemasangan, visual advertising berkualitas untuk brand Anda.
+                Dari signage, neon box, huruf timbul, billboard, hingga solusi promosi lainnya. Konsep hingga pemasangan dengan kualitas terbaik di Bogor.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 reveal reveal-delay-3">
                 <a href="#kontak" className="btn-primary justify-center">

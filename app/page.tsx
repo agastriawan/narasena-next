@@ -5,6 +5,22 @@ import { TestimonialCarousel } from '@/components/ui/TestimonialCarousel';
 import { servicesData } from '@/data/services';
 import { portfolioData } from '@/data/portfolio';
 import { ArrowRight, MessageCircle, Lightbulb, Type, Frame, Square, MonitorPlay, ImageIcon, Fence, Box } from 'lucide-react';
+import { Metadata } from 'next';
+import { SEO_CONFIG } from '@/lib/seo';
+
+export const metadata: Metadata = {
+  title: SEO_CONFIG.defaultTitle,
+  description: SEO_CONFIG.defaultDescription,
+  alternates: {
+    canonical: SEO_CONFIG.siteUrl,
+  },
+  openGraph: {
+    title: SEO_CONFIG.defaultTitle,
+    description: SEO_CONFIG.defaultDescription,
+    url: SEO_CONFIG.siteUrl,
+    type: 'website',
+  },
+};
 
 export default function HomePage() {
   return (
@@ -28,18 +44,18 @@ export default function HomePage() {
             {/* Left Content */}
             <div className="max-w-[700px]">
               {/* Eyebrow */}
-              <p className="eyebrow mb-3 md:mb-4 reveal text-xs md:text-sm">Advertising</p>
+              <p className="eyebrow mb-3 md:mb-4 reveal text-xs md:text-sm">Advertising Profesional</p>
 
-              {/* Headline */}
+              {/* Headline with SEO Keywords */}
               <h1 className="text-[2rem] sm:text-[2.5rem] md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.1] mb-4 md:mb-6 reveal reveal-delay-1 text-navy">
                 Wujudkan Brand<br />
                 <span className="text-orange">Anda Terlihat</span><br />
                 Nyata
               </h1>
 
-              {/* Subheading */}
-              <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8 max-w-[480px] text-navy/70 reveal reveal-delay-2">
-                Spesialis signage & reklame profesional — dari neon box, huruf timbul, hingga billboard. Kami buat bisnis Anda tampil dominan dan berkesan.
+              {/* Subheading with Local Keywords */}
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8 max-w-[540px] text-navy/70 reveal reveal-delay-2">
+                Jasa advertising profesional di Bogor — signage, neon box, huruf timbul, billboard, dan solusi promosi lainnya. Gratis konsultasi.
               </p>
 
               {/* CTA Buttons */}
@@ -59,7 +75,7 @@ export default function HomePage() {
               <div className="relative">
                 <img 
                   src="/images/hero-image.png" 
-                  alt="Nara Sena Projects" 
+                  alt="Jasa Pembuatan Signage Bogor - Neon Box, Huruf Timbul, Billboard" 
                   className="w-full h-auto object-cover"
                 />
                 {/* Image Overlay */}

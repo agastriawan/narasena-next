@@ -6,6 +6,8 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { WhatsAppFloatingButton } from '@/components/ui/WhatsAppFloatingButton';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
+import { SEO_CONFIG, generateLocalBusinessSchema, generateOrganizationSchema } from '@/lib/seo';
+import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -15,37 +17,47 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SEO_CONFIG.siteUrl),
   title: {
-    default: SITE_CONFIG.name,
-    template: `%s | ${SITE_CONFIG.name}`,
+    default: SEO_CONFIG.defaultTitle,
+    template: `%s | ${SEO_CONFIG.siteName}`,
   },
-  description: SITE_CONFIG.description,
+  description: SEO_CONFIG.defaultDescription,
   keywords: [
-    'signage',
-    'jasa signage',
-    'plang nama',
-    'huruf timbul',
-    'neon box',
-    'billboard',
-    'LED display',
-    'advertising',
-    'reklame',
-    'nara sena',
+    // Primary local keywords
+    ...SEO_CONFIG.primaryKeywords,
+    // Secondary keywords
+    ...SEO_CONFIG.secondaryKeywords,
+    // General keywords
+    'signage profesional',
+    'jasa advertising',
+    'pembuatan plang nama',
+    'nara sena advertising',
   ],
-  authors: [{ name: SITE_CONFIG.name }],
-  creator: SITE_CONFIG.name,
+  authors: [{ name: SEO_CONFIG.siteName }],
+  creator: SEO_CONFIG.siteName,
+  publisher: SEO_CONFIG.siteName,
   openGraph: {
     type: 'website',
     locale: 'id_ID',
-    url: SITE_CONFIG.url,
-    title: SITE_CONFIG.name,
-    description: SITE_CONFIG.description,
-    siteName: SITE_CONFIG.name,
+    url: SEO_CONFIG.siteUrl,
+    title: SEO_CONFIG.defaultTitle,
+    description: SEO_CONFIG.defaultDescription,
+    siteName: SEO_CONFIG.siteName,
+    images: [
+      {
+        url: SEO_CONFIG.ogImage.url,
+        width: SEO_CONFIG.ogImage.width,
+        height: SEO_CONFIG.ogImage.height,
+        alt: SEO_CONFIG.ogImage.alt,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: SITE_CONFIG.name,
-    description: SITE_CONFIG.description,
+    title: SEO_CONFIG.defaultTitle,
+    description: SEO_CONFIG.defaultDescription,
+    images: [SEO_CONFIG.ogImage.url],
   },
   robots: {
     index: true,
@@ -63,6 +75,12 @@ export const metadata: Metadata = {
     shortcut: '/images/portfolio/logo_transparant.png',
     apple: '/images/portfolio/logo_transparant.png',
   },
+  alternates: {
+    canonical: SEO_CONFIG.siteUrl,
+  },
+  verification: {
+    google: 'your-google-verification-code', // Ganti dengan verification code dari Google Search Console
+  },
 };
 
 export default function RootLayout({
@@ -70,9 +88,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const localBusinessSchema = generateLocalBusinessSchema();
+  const organizationSchema = generateOrganizationSchema();
+
   return (
     <html lang="id" className={poppins.variable}>
+      <head>
+        {/* JSON-LD Schema Markup for Local Business */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+        {/* JSON-LD Schema Markup for Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
       <body className={poppins.className}>
+        <GoogleAnalytics />
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />

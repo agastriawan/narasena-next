@@ -1,5 +1,21 @@
 import { ArrowRight, Target, Eye, Award, Users, Clock, Shield } from 'lucide-react';
 import Image from 'next/image';
+import { Metadata } from 'next';
+import { SEO_CONFIG } from '@/lib/seo';
+
+export const metadata: Metadata = {
+  title: 'Tentang Kami - Nara Sena Advertising | Solusi Promosi Terpercaya Bogor',
+  description: 'Nara Sena Advertising adalah penyedia jasa advertising profesional di Bogor dengan 3+ tahun pengalaman. Melayani 72+ proyek advertising berkualitas di Jabodetabek.',
+  alternates: {
+    canonical: `${SEO_CONFIG.siteUrl}/tentang-kami`,
+  },
+  openGraph: {
+    title: 'Tentang Kami - Nara Sena Advertising',
+    description: 'Penyedia jasa advertising profesional di Bogor dengan 3+ tahun pengalaman',
+    url: `${SEO_CONFIG.siteUrl}/tentang-kami`,
+    type: 'website',
+  },
+};
 
 export default function TentangKamiPage() {
   return (
@@ -19,10 +35,10 @@ export default function TentangKamiPage() {
             <div className="max-w-[700px]">
               <p className="eyebrow mb-3 md:mb-4 reveal">Mengenal Kami</p>
               <h1 className="text-[2rem] sm:text-[2.5rem] md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.1] mb-4 md:mb-6 reveal reveal-delay-1 text-navy">
-                Partner <span className="text-orange">Terpercaya</span> Anda
+                Partner Advertising <span className="text-orange">Terpercaya</span> Anda
               </h1>
               <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-[540px] text-navy/70 mb-6 md:mb-8 reveal reveal-delay-2">
-                3+ tahun pengalaman membantu ratusan bisnis tampil profesional.
+                Nara Sena Advertising - 3+ tahun pengalaman melayani 72+ proyek advertising profesional di Bogor dan Jabodetabek. Solusi promosi terpadu untuk bisnis Anda.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 reveal reveal-delay-3">
                 <a href="#kontak" className="btn-primary justify-center">

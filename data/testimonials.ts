@@ -3,7 +3,7 @@ import { Testimonial } from '@/types';
 export const testimonialsData: Testimonial[] = [
   {
     id: 'testimonial-1',
-    name: 'Budi Santoso',
+    name: 'Budi s',
     company: 'Kopi Nusantara',
     position: 'Owner',
     content: 'Pelayanan sangat profesional dan hasil pekerjaannya memuaskan. Signage cafe kami terlihat sangat menarik dan berkualitas tinggi.',

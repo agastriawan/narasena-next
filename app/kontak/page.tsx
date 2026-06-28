@@ -200,7 +200,7 @@ export default function KontakPage() {
       <section className="relative h-[400px] md:h-[500px] lg:h-[600px] bg-white overflow-hidden">
         {/* Google Maps Iframe */}
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.1403292064524!2d106.82362649999999!3d-6.503914000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c181ff0a0963%3A0xa80c9a6b037ac0cb!2sJl.%20Sirojul%20Munir%20No.215C%2C%20RT.01%2FRW.07%2C%20Nanggewer%2C%20Kec.%20Cibinong%2C%20Kabupaten%20Bogor%2C%20Jawa%20Barat%2016912!5e0!3m2!1sid!2sid!4v1782525980676!5m2!1sid!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.0329210918534!2d106.8226986!3d-6.5050099!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c178b4c3535b%3A0xaf7c69eca1ee538!2sJl.%20Sirojul%20Munir%20No.250a%2C%20RT.01%2FRW.07%2C%20Nanggewer%2C%20Kec.%20Cibinong%2C%20Kabupaten%20Bogor%2C%20Jawa%20Barat%2016912!5e0!3m2!1sid!2sid!4v1782612820910!5m2!1sid!2sid"
           width="100%" 
           height="100%" 
           style={{ border: 0 }}
@@ -222,7 +222,7 @@ export default function KontakPage() {
                 </div>
               </div>
               <a 
-                href="https://www.google.com/maps/dir/?api=1&destination=-6.503914,106.8236265&destination_place_id=ChIJYwkK_4HBaS4RywesB2uawKg" 
+                href="https://www.google.com/maps/search/?api=1&query=Jl.+Sirojul+Munir+No.250a,+Nanggewer,+Cibinong,+Bogor" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-sm whitespace-nowrap"

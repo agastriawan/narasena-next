@@ -100,19 +100,6 @@ export function Footer() {
             </svg>
           </a>
 
-          {/* Facebook */}
-          <a
-            href={SOCIAL_LINKS.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-[34px] w-[34px] items-center justify-center border border-navy/20 transition-all hover:border-orange hover:bg-orange/10"
-            aria-label="Facebook"
-          >
-            <svg viewBox="0 0 24 24" className="h-[14px] w-[14px] stroke-navy/50 fill-none" strokeWidth={1.8}>
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-            </svg>
-          </a>
-
           {/* WhatsApp */}
           <a
             href={`https://wa.me/${CONTACT_INFO.whatsapp}`}

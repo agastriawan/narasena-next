@@ -27,7 +27,7 @@ export const NAV_LINKS = [
 // Social Media Links
 export const SOCIAL_LINKS = {
   facebook: 'https://facebook.com',
-  instagram: 'https://instagram.com',
+  instagram: 'https://www.instagram.com/narasena.adv?igsh=bTAzNDlrZnlpc280',
   whatsapp: `https://wa.me/${CONTACT_INFO.whatsapp}`,
 } as const;
 

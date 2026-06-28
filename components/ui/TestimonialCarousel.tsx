@@ -9,11 +9,6 @@ const testimonials = [
     title: "Graha ASP"
   },
   {
-    quote: "Huruf timbulnya berkualitas tinggi dan pemasangannya profesional. Hasil memuaskan untuk sekolah kami. Highly recommended!",
-    name: "Bapak Amir",
-    title: "SMA Negeri 3 Cibinong"
-  },
-  {
     quote: "Tim yang sangat profesional dalam branding produk kami. Hasil memuaskan dan sesuai standar perusahaan. Terima kasih Nara Sena!",
     name: "Bapak Helmi & Ibu Atin",
     title: "Branding Air Minum Cleo"
